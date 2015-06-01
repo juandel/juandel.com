@@ -12,7 +12,7 @@
         <title>Juandel.com</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="<?=base_url()?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="<?=base_url()?>css/agency.css" rel="stylesheet">
@@ -21,7 +21,7 @@
         <link href="<?=base_url()?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="<?=base_url()?>css/lightbox.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Life+Savers:700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>

@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <!-- <div class="col-sm-4">
                 <div class="team-member">
                     <img src="<?=base_url()?>img/team/2.jpg" class="img-responsive img-circle" alt="">
                     <h4>Larry Parker</h4>
@@ -52,7 +52,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <p class="large text-muted"></p>
