@@ -36,7 +36,7 @@ if (count($ca)>1) {
                     </li>
                     
                     <?php
-                        if (uri_string() =="web" || empty(uri_string())) {
+                        if (uri_string() =="web" || uri_string()=="") {
                     ?>
 
                             <li>
