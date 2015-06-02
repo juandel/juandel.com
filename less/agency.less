@@ -2,10 +2,16 @@
 @import "mixins.less";
 
 // Global Components
-
+html{
+	background-image: url('../img/logos/background.png');
+}
 body {
 	overflow-x: hidden;
 	.body-font;
+	padding: 0px;
+}
+#page-top{
+	padding: 0px;
 }
 
 .text-muted {
@@ -83,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default {
 	background-color: @gray-darkest;
 	border-color: transparent;
+
 	.navbar-brand {
 		color: @brand-primary;
 		.script-font;
@@ -133,6 +140,10 @@ h1, h2, h3, h4, h5, h6 {
 		background-color: darken(@brand-primary, 10%);
 	}
 }
+.container>.navbar-header {
+  margin-right: -17px;
+  margin-left: 0;
+}
 
 @media(min-width:768px) {
     .navbar-default {
@@ -162,6 +173,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+	/*Add padding for fix of slider under nav*/
+	margin-top: 51px;
+	/**/
 	background-image: url('../img/header-bg.jpg');
 	background-repeat: none;
 	background-attachment: scroll;

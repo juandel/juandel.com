@@ -1,6 +1,13 @@
+html {
+  background-image: url('../img/logos/background.png');
+}
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0px;
+}
+#page-top {
+  padding: 0px;
 }
 .text-muted {
   color: #777777;
@@ -191,6 +198,10 @@ fieldset[disabled] .btn-xl.active {
   color: white;
   background-color: #93a6c9;
 }
+.container > .navbar-header {
+  margin-right: -17px;
+  margin-left: 0;
+}
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -215,6 +226,9 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
+  /*Add padding for fix of slider under nav*/
+  margin-top: 51px;
+  /**/
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
   background-attachment: scroll;

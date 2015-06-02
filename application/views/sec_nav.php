@@ -5,13 +5,13 @@ if (count($ca)>1) {
     $la = $ca[1];
 ?>
 
-<body id="page-top <?=$la?>" class="index">
+<body id="page-top <?=$la?>" class="index" style="padding:0px;">
 
 <?php
 }else{
 ?>
 
-<body id="page-top home" class="index">
+<body id="page-top home" class="index container" style="padding:0px;">
 <?php
 }
 ?>
