@@ -25,7 +25,7 @@ if (count($ca)>1) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="<?=base_url()?>">Juandel</a>
+                <a class="navbar-brand page-scroll" href="<?=base_url()?>">Jaddel</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

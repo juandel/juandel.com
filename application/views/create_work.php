@@ -114,6 +114,7 @@ $data_submit = array(
 echo form_submit($data_submit);
 echo form_close();
 ?>
+<p>Images should be as big as 1024 x 768</p>
 <a id="deleteButton" class="btn btn-danger" href="<?=base_url('web')?>">Cancel</a>
 
 	</div>

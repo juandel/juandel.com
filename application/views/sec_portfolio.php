@@ -22,7 +22,7 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="<?=base_url()?>img/uploads/<?=$images[0]['name']?>" class="img-responsive" alt="">
+                            <img src="<?=base_url()?>img/uploads/<?=$images[0]['name']?>" class="img-responsive" style="height:200px;">
                         </a>
                         <div class="portfolio-caption">
                             <h4><?=$work['title']?></h4>
@@ -49,7 +49,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <i class="glyphicon glyphicon-picture" style="text-align:center; font-size:190px;height:202.5px; width:360px; background:grey;"></i>
+                    <i class="glyphicon glyphicon-picture" style=" height:200px; width:100%; text-align:center; font-size:190px; background:grey;"></i>
                     
                 </a>
                 <div class="portfolio-caption">
