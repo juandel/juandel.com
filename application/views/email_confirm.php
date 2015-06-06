@@ -4,7 +4,7 @@ foreach ($head as $he) {
   echo $he;
 }
 ?>
-<div id="email-confirm" class="container-fluid " style=" padding: 70px 0px; margin-top: 70px; padding-bottom: 20px; background-color:rgb(247, 247, 247); text-align:center;">
+<div class="container-fluid " style=" padding: 70px 0px; background-color:rgb(247, 247, 247); text-align:center;">
 	<?php
 	if (isset($sent)) {
 		echo '<h2 class="section-heading">'.$sent.'</h2><br>';

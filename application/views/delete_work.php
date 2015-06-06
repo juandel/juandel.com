@@ -5,7 +5,7 @@ foreach ($head as $he) {
 }
 ?>
 
-<div class="container-fluid " style="margin-top: 70px; background-color:rgb(247, 247, 247)">
+<div class="container-fluid " style="background-color:rgb(247, 247, 247)">
 	<div class="col-md-12" style="background-color:white">
 <?php 
 
@@ -18,7 +18,6 @@ if (isset($error)) {
 if (isset($confirm)) {
     echo "<p>".$confirm."</p>";
 }
-
 
 ?>
 

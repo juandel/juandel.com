@@ -225,10 +225,14 @@ fieldset[disabled] .btn-xl.active {
     padding: 10px 0;
   }
 }
+.nav-fix-height {
+  height: 50px;
+}
+.alert .alert-danger {
+  background-color: white;
+  border: none;
+}
 header {
-  /*Add padding for fix of slider under nav*/
-  margin-top: 51px;
-  /**/
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
   background-attachment: scroll;

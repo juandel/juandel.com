@@ -11,7 +11,7 @@
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/boomerangfloor.png" alt="">
+                            <img class="img-circle img-responsive" src="<?=base_url();?>img/about/boomerangfloor.png" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -28,7 +28,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            <img class="img-circle img-responsive" src="<?=base_url();?>img/about/2.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -45,7 +45,7 @@
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            <img class="img-circle img-responsive" src="<?=base_url();?>img/about/3.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -61,7 +61,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            <img class="img-circle img-responsive" src="<?=base_url();?>img/about/4.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">

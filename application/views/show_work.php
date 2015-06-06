@@ -6,8 +6,8 @@ foreach ($head as $he) {
 if (isset($work[0])) {
 ?>
 
-	<div class="container" style="margin-top: 70px; padding:0;">
-		<div class="row container-fluid bg-light-gray" style="">
+	<div class="container" style=" padding:0;">
+		<div class="row container-fluid bg-light-gray" >
 			<h2><?=$work[0]['title']?></h2>
 
 			<p><?=$work[0]['description']?></p>

@@ -41,35 +41,76 @@ class Web extends MY_Controller {
 	public function email(){
 
 		if ($_POST['submit_contact']) {
-			// Fix for date and time
-			date_default_timezone_set('America/Argentina/Buenos_Aires');
-			// email config params
-			$data['email']=$this->input->post('email');
-			$data['name']=$this->input->post('name');
-			$data['location']=$this->input->post('location');
-			$data['message']=$this->input->post('message');
-			$config = array('protocol' => 'smtp',
-						'smtp_host' => 'ssl://smtp.googlemail.com',
-						'smtp_port' => 465,
-						'smtp_user' => 'pixnel11@gmail.com',
-						'smtp_pass' => 'gutentag2#'
-						);
-			// call email library and pass config
-			$this->load->library('email', $config);
-			// fix for starting an email
-			$this->email->set_newline("\r\n");
-			// Filling out headers of email and message
-			$this->email->from($data['email']);
-			$this->email->to('juandel@gmail.com');
-			$this->email->subject('jaddel.com- contact form');
-			$this->email->message($data['message']."\nCustomer's location: ". $data['location']);
-
-			// Send email and check if it was send 
-			if($this->email->send()){
-				$data['sent'] = "Your email was sent correctly";		
-			}else{
-				$data['fail'] = "there was a problem sending the email: ".show_error($this->email->print_debugger());
+			$this->load->library('form_validation');
+			// Validation Rules
+			$config_validation = array(
+	               array(
+	                     'field'   => 'email', 
+	                     'label'   => 'Email', 
+	                     'rules'   => 'trim|required|valid_email'
+	                  ),
+	               array(
+	                     'field'   => 'name', 
+	                     'label'   => 'Name', 
+	                     'rules'   => 'trim|required'
+	                  ),
+	               array(
+	                     'field'   => 'location', 
+	                     'label'   => 'Location', 
+	                     'rules'   => 'trim|required'
+	                  ),   
+	               array(
+	                     'field'   => 'message', 
+	                     'label'   => 'Message', 
+	                     'rules'   => 'required'
+	                  )
+	        );
+			$this->form_validation->set_rules($config_validation);
+			$this->form_validation->set_error_delimiters('<div class="alert alert-danger" style="background:none; 
+  border:none" >', '</div>');
+			// Check to see if validation OR upload failed
+			if ($this->form_validation->run() == FALSE){
+				
+				$this->index();
 			}
+			else{
+				// Fix for date and time
+				date_default_timezone_set('America/Argentina/Buenos_Aires');
+				// Get data from Form
+				$data['email']=$this->input->post('email');
+				$data['name']=$this->input->post('name');
+				$data['location']=$this->input->post('location');
+				$data['message']=$this->input->post('message');
+				// Update client data to DB
+				$this->load->model('Clients_model');
+				$this->Clients_model->set_client($data['email'],$data['name'], $data['location']);
+				
+				// email config params
+				$config = array('protocol' => 'smtp',
+							'smtp_host' => 'ssl://smtp.googlemail.com',
+							'smtp_port' => 465,
+							'smtp_user' => 'pixnel11@gmail.com',
+							'smtp_pass' => 'gutentag2#'
+							);
+				// call email library and pass config
+				$this->load->library('email', $config);
+				// fix for starting an email
+				$this->email->set_newline("\r\n");
+				// Filling out headers of email and message
+				$this->email->from($data['email']);
+				$this->email->to('juandel@gmail.com');
+				$this->email->subject('jaddel.com- contact form');
+				$this->email->message($data['message']."\nCustomer's location: ". $data['location']);
+
+				// Send email and check if it was send 
+				if($this->email->send()){
+					$data['sent'] = "Your email was sent correctly";		
+				}else{
+					$data['fail'] = "there was a problem sending the email: ".show_error($this->email->print_debugger());
+				}	
+			}
+
+			
 			$data['head']=$this->top_template();
 			$data['footer']=$this->bottom_template();
 			$this->load->view('email_confirm', $data);

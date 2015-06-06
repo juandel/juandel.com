@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Contact Us</h2>
-                <h3 class="section-subheading text-muted">Our form really works and we have people ready to get back to you</h3>
+                <h3 class="section-subheading text-muted" style="color:white;">Our form really works and we have people ready to get back to you</h3>
             </div>
         </div>
         <div class="row">
@@ -15,7 +15,7 @@
                                 'style' => 'padding:20px;',
                                 'name' =>'contactForm',
                                     );
-                echo form_open_multipart('web/email', $data_form);
+                echo form_open_multipart('web/email#contact', $data_form);
                     div("", "row");
                         div("", "col-md-6");
                             div("", "form-group");  

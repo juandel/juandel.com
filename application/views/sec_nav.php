@@ -15,7 +15,7 @@ if (count($ca)>1) {
 <?php
 }
 ?>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink" style="margin-bottom:0px;">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink" style="">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -36,7 +36,7 @@ if (count($ca)>1) {
                     </li>
                     
                     <?php
-                        if (uri_string() =="web" || uri_string()=="") {
+                        if (uri_string() =="web" || uri_string()=="" || uri_string()=="web/email") {
                     ?>
 
                             <li>
@@ -86,3 +86,4 @@ if (count($ca)>1) {
         </div>
             <!-- /.container-fluid -->
     </nav>
+    <div class= "container nav-fix-height"></div>

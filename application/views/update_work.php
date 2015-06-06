@@ -5,7 +5,7 @@ foreach ($head as $he) {
 }
 ?>
 
-<div class="container-fluid " style="margin-top: 70px; background-color:rgb(247, 247, 247)">
+<div class="container-fluid first-div-sec" style="background-color:rgb(247, 247, 247)">
 	<div class="col-md-12" style="background-color:white">
 <?php 
 

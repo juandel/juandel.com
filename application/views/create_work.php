@@ -10,20 +10,17 @@ foreach ($head as $he) {
 
 ?>
 
-<div class="container-fluid " style=" padding-top: 20px; margin-top: 70px; padding-bottom: 20px; background-color:rgb(247, 247, 247)">
+<div class="container-fluid " style=" padding: 20px 0px; background-color:rgb(247, 247, 247)">
   <ol class="breadcrumb">
     <li><a href="<?=base_url()?>">Home</a></li>
     <li><?=$view_name;?></li>
   </ol>
-<div class="col-md-6" style="background-color:white">
+
 <?php 
 
-// if (isset($upload_data)) {
-// 	print_r($upload_data);
-// }
-
 if (isset($error)) {
-	echo '<div class="alert alert-danger" style="background-color:white; border:none">'.$error.'\n';
+	echo '<div class="alert alert-danger style="background-color:white; 
+  border:none" >'.$error.'\n</div>';
 }
 
 if (isset($feedback)) {
