@@ -6,6 +6,7 @@ class Web extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->model(array('Images_model', 'Works_model'));
+		$this->load->helper(array('form','html'));
 	}
 	/**
 	 * Index Page for this controller.
@@ -35,6 +36,45 @@ class Web extends MY_Controller {
 		$data['contact']=$this->contact();
 	
 		$this->load->view('view_main',$data);
+	}
+
+	public function email(){
+
+		if ($_POST['submit_contact']) {
+			// Fix for date and time
+			date_default_timezone_set('America/Argentina/Buenos_Aires');
+			// email config params
+			$data['email']=$this->input->post('email');
+			$data['name']=$this->input->post('name');
+			$data['location']=$this->input->post('location');
+			$data['message']=$this->input->post('message');
+			$config = array('protocol' => 'smtp',
+						'smtp_host' => 'ssl://smtp.googlemail.com',
+						'smtp_port' => 465,
+						'smtp_user' => 'pixnel11@gmail.com',
+						'smtp_pass' => 'gutentag2#'
+						);
+			// call email library and pass config
+			$this->load->library('email', $config);
+			// fix for starting an email
+			$this->email->set_newline("\r\n");
+			// Filling out headers of email and message
+			$this->email->from($data['email']);
+			$this->email->to('juandel@gmail.com');
+			$this->email->subject('jaddel.com- contact form');
+			$this->email->message($data['message']."\nCustomer's location: ". $data['location']);
+
+			// Send email and check if it was send 
+			if($this->email->send()){
+				$data['sent'] = "Your email was sent correctly";		
+			}else{
+				$data['fail'] = "there was a problem sending the email: ".show_error($this->email->print_debugger());
+			}
+			$data['head']=$this->top_template();
+			$data['footer']=$this->bottom_template();
+			$this->load->view('email_confirm', $data);
+		}
+		
 	}
 
 	private function header()
@@ -95,6 +135,7 @@ class Web extends MY_Controller {
 
 	private function contact()
 	{
+
 		return $this->load->view('sec_contact',NULL,TRUE);
 	}
 
