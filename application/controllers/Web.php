@@ -87,10 +87,10 @@ class Web extends MY_Controller {
 				
 				// email config params
 				$config = array('protocol' => 'smtp',
-							'smtp_host' => 'ssl://smtp.googlemail.com',
+							'smtp_host' => 'ssl://box1117.bluehost.com',
 							'smtp_port' => 465,
-							'smtp_user' => 'pixnel11@gmail.com',
-							'smtp_pass' => 'gutentag2#'
+							'smtp_user' => 'contact@jaddel.com',
+							'smtp_pass' => 'Gutentag_2#'
 							);
 				// call email library and pass config
 				$this->load->library('email', $config);

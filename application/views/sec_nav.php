@@ -72,7 +72,7 @@ if (count($ca)>1) {
                     ?>
 
                     <li>
-                        <a class="page-scroll" href="<?=base_url()?>web">Home</a>
+                        <a class="page-scroll" href="<?=base_url()?>">Home</a>
                     </li>
                    
 
