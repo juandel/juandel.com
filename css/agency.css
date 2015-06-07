@@ -233,8 +233,8 @@ fieldset[disabled] .btn-xl.active {
   border: none;
 }
 header {
-  height: 690px;
   overflow: hidden;
+  background-image: url('../img/header-bg.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;

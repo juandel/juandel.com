@@ -123,12 +123,12 @@ class Web extends MY_Controller {
 		$this->load->helper('html');
 		$images= $this->Images_model->get_image_names();
 		$images_names = array();
-		$e =0;
+		
 		foreach ($images as $value) {
-			$images_names[] = $value;	
-			$e++;	
+			$images_names[] = $value['name'];		
 		}
-			$data['images']= $images_names;
+
+		$data['images']= $images_names;
 		return $this->load->view('sec_header',$data, TRUE);
 
 	}
