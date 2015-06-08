@@ -316,7 +316,7 @@ class Works extends MY_Controller {
 
 		if (isset($id)) {
 			$data['images'] = $this->Images_model->get_image_works($id);
-			print_r($data['images']);
+			// print_r($data['images']);
 			
 			if($this->Works_model->delete_works($id)){
 				$data['confirm'] = "Work was Deleted from works table";
@@ -325,9 +325,12 @@ class Works extends MY_Controller {
 					$data['confirm'] = "Work was Deleted from images table and works table";
 					
 					foreach ($data['images'] as $image) {
+						$ext = explode('.', $image['name']);
+        				$filename_ext = "./img/uploads/".$ext[0]."_thumb.".$ext[1];
 						$filename = "./img/uploads/".$image['name'];
 			            if (is_file($filename)) {
 			                @unlink($filename);
+			                @unlink($filename_ext);
 			                $data['error']['not_deleted'] = "the file was deleted succesfully";
 			            }else{
 			                $data['error']['not_deleted'] = "the filename: ".$filename." is not a file. Can't erase";
