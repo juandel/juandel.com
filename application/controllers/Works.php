@@ -217,6 +217,7 @@ class Works extends MY_Controller {
 				$config['max_height']  = '768';
 				// send config to upload library which uploads file
 				$this->load->library('upload');
+				$this->load->library('image_lib');
 				$this->upload->initialize($config);
 				
 				// Validation Rules
@@ -285,6 +286,7 @@ class Works extends MY_Controller {
 						$data['error']['upload_file']= $this->upload->display_errors();
 					}else{
 						$data['upload_data'] = $this->upload->data();
+						$data['resize_error']=$this->resizeImage($data['upload_data']['full_path'], $data['upload_data']['file_path']);
 
 						// Check to see if image is already in DB. If it's NOT, then Update
 						if(!$this->Images_model->check_filename_exists($data['upload_data']['file_name'])){

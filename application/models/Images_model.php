@@ -40,17 +40,23 @@ class Images_model extends CI_Model {
     }
 
     function remove_work_id($image){
-            $this->db->where('name', $image);
-            $this->db->delete('images'); 
-            $filename = "./img/uploads/".$image;
-            if (is_file($filename)) {
-                @unlink($filename);
-                return "<p>the file was deleted succesfully</p>";
+        // Delete from DB
+        $this->db->where('name', $image);
+        $this->db->delete('images'); 
 
-            }else{
-                return "<p>the filename: ".$filename." is not a file. Can't erase</p>";
-            }
+        // Remove from Directory
+        $ext = explode('.', $image);
+        $filename_ext = "./img/uploads/".$ext[0]."_thumb.".$ext[1];
+        $filename = "./img/uploads/".$image;
 
+        if (is_file($filename)) {
+            @unlink($filename);
+            @unlink($filename_ext);
+            return "<p>the file was deleted succesfully</p>";
+
+        }else{
+            return "<p>the filename: ".$filename." is not a file. Can't erase</p>";
+        }
     }
 
     function delete_images($id)
