@@ -7,7 +7,8 @@
         <div id="slider" class="nivoSlider">
         	<?php
         	foreach ($images as $image) {
-        		echo img(base_url('img/uploads/'.$image));
+                $ext = explode('.', $image);
+        		echo img(base_url('img/uploads/'.$ext[0]."_thumb.".$ext[1]));
         	}
         	 ?>
 		    <!-- <img src="images/slide1.jpg" alt="" /> -->

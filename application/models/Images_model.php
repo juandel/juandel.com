@@ -39,9 +39,7 @@ class Images_model extends CI_Model {
         return $query->result_array();
     }
 
-    function remove_work_id($images){
-
-        foreach ($images as $image) {
+    function remove_work_id($image){
             $this->db->where('name', $image);
             $this->db->delete('images'); 
             $filename = "./img/uploads/".$image;
@@ -52,8 +50,6 @@ class Images_model extends CI_Model {
             }else{
                 return "<p>the filename: ".$filename." is not a file. Can't erase</p>";
             }
-            
-        }
 
     }
 

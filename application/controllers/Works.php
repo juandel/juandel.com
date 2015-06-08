@@ -29,6 +29,25 @@ class Works extends MY_Controller {
 		$this->load->view('create_work',$data);
 	}
 
+	public function resizeImage($path, $file){
+		$config['image_library'] = 'gd2';
+		$config['source_image'] = $path;
+		$config['create_thumb'] = TRUE;
+		$config['maintain_ratio'] = TRUE;
+		$config['width'] = 800;
+		$config['height'] = 450;
+		$config['new_image']= $file;
+
+
+		$this->image_lib->initialize($config);
+		if (!$this->image_lib->resize())
+		{
+        	return $this->image_lib->display_errors();
+		}
+		$this->image_lib->clear();
+
+	}
+
 	public function show_work($id)
 	{
 		$data['head']=$this->head;
@@ -45,16 +64,6 @@ class Works extends MY_Controller {
 		$data['footer']=$this->footer;
 
 		if ($this->input->post('submit')) {
-			$config['upload_path'] = './img/uploads/';
-			$config['allowed_types'] = 'gif|jpg|png';
-			$config['overwrite']=TRUE;
-			$config['max_size']	= '1024';
-			$config['max_width']  = '1024';
-			$config['max_height']  = '768';
-			// send config to upload library which uploads file
-			$this->load->library('upload');
-			$this->upload->initialize($config);
-			
 			// Validation Rules
 			$config_validation = array(
 	               array(
@@ -94,32 +103,58 @@ class Works extends MY_Controller {
 				$data['description']=$this->input->post('description');
 				$data['software']=$this->input->post('software');
 				$data['location']=$this->input->post('location');
+				
+				// Load upload Library
+				$this->load->library('upload');
+				$this->load->library('image_lib');
+
+				// Set config for file upload
+				$config['upload_path'] = './img/uploads/';
+				$config['allowed_types'] = 'gif|jpg|png';
+				$config['overwrite']=TRUE;
+				$config['max_size']	= '1024';
+				$config['max_width']  = '1024';
+				$config['max_height']  = '768';
+				
+
+				// send config to upload library which uploads file
+				$this->upload->initialize($config);
+				// If title does NOT exist in WORKS insert Work data into WORK DB
 				if (!$this->Works_model->check_title_exists($data['title'])) {
 					$data['work_id']=$this->Works_model->insert_work($data['title'],$data['description'],$data['software'],$data['location']);
-				}
+					
+					$files = $_FILES['images'];
+					$e =0;
+					foreach ($files['name'] as $key => $value) {
+						$_FILES['images']['name'] = $files['name'][$key];
+		                $_FILES['images']['type'] = $files['type'][$key];
+		                $_FILES['images']['tmp_name'] = $files['tmp_name'][$key];
+		                $_FILES['images']['error'] = $files['error'][$key];
+		                $_FILES['images']['size'] = $files['size'][$key];
 
-				$files = $_FILES['images'];
-				
-				foreach ($files['name'] as $key => $value) {
-					$_FILES['images']['name'] = $files['name'][$key];
-	                $_FILES['images']['type'] = $files['type'][$key];
-	                $_FILES['images']['tmp_name'] = $files['tmp_name'][$key];
-	                $_FILES['images']['error'] = $files['error'][$key];
-	                $_FILES['images']['size'] = $files['size'][$key];
-					if (!$this->upload->do_upload('images')) {
-						$data['error']= $this->upload->display_errors();
-					}else{
-						$data['upload_data'] = $this->upload->data();
-
-						// Check to see if image is already in DB. If it's NOT, then Update
-						if(!$this->Images_model->check_filename_exists($data['upload_data']['file_name'])){
-							$this->Images_model->insert_image($data['upload_data']['file_name'], $data['upload_data']['file_path'],$data['work_id']);
-							$data['feedback']['db']= "Image loaded into DB";
+						if (!$this->upload->do_upload('images')) {
+							$data['error']= $this->upload->display_errors();
 						}else{
-							$data['error'] = "An image with the same name already exists in DB";
-						}
-					}	
+							$data['upload_data'] = $this->upload->data();
+							// Call function resizeImage from this controller
+							$data['resize_error']=$this->resizeImage($data['upload_data']['full_path'], $data['upload_data']['file_path']);
+
+							// Check to see if image is already in DB. If it's NOT, then Update
+							if(!$this->Images_model->check_filename_exists($data['upload_data']['file_name'])){
+								$this->Images_model->insert_image($data['upload_data']['file_name'], $data['upload_data']['file_path'],$data['work_id']);
+									$e++;
+									$data['db']= " Images loaded into DB: ".$e;	
+								
+							}else{
+								$data['error'] = "An image with the name ".$data['upload_data']['file_name']. " already exists in DB";
+							}
+						}	
+					}
+				}else{
+					$data['error']="Work already exists with the title: ".$data['title'].".";
 				}
+
+				
 				// echo "<pre>";
 				// print_r($data['upload_data']);
 				// echo "</pre>";
@@ -163,6 +198,7 @@ class Works extends MY_Controller {
 			// $this->load->view('create_work', $data);
 		// }
 	}
+
 	function update_work($id=NULL){
 		$this->load->helper(array('file'));
 		$data['head']=$this->head;
@@ -221,8 +257,14 @@ class Works extends MY_Controller {
 					$data['software']=$this->input->post('software');
 					$data['location']=$this->input->post('location');
 					$data['image_radio']=$this->input->post('image_radio[]');
+					// echo "<pre>";
+					// print_r($data['image_radio']);
+					// echo "</pre>";
 					if (isset($data['image_radio'])) {
-						$data['error']['remove_file'] = $this->Images_model->remove_work_id($data['image_radio']);
+						foreach ($data['image_radio'] as $value) {
+							$data['error']['remove_file'] = $this->Images_model->remove_work_id($value);
+						}
+						
 					}
 					
 					$this->Works_model->update_work($data['title'],

@@ -17,16 +17,18 @@ foreach ($head as $he) {
   </ol>
 
 <?php 
-
-if (isset($error)) {
-	echo '<div class="alert alert-danger style="background-color:white; 
-  border:none" >'.$error.'\n</div>';
+if (isset($resize_error)) {
+  echo '<div class="alert alert-warning" style="background:none; 
+  border:none;" >'.$resize_error.'</div>';
 }
 
-if (isset($feedback)) {
-  foreach ($feedback as $key => $value) {
-    echo "<p>".$value."</p>";
-  }
+if (isset($error)) {
+	echo '<div class="alert alert-warning" style="background:none; 
+  border:none;" >'.$error.'</div>';
+}
+
+if (isset($db)) {
+    echo "<p>".$db."</p>";
 }
 
 // Form helper Inserted
