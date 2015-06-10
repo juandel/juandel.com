@@ -6,7 +6,15 @@
         </div> -->
         <div id="slider" class="nivoSlider">
         	<?php
-        	foreach ($images as $image) {
+            $images_rand_key = array_rand($images, 3);
+            // print_r($images_rand_key);
+            // print_r($images);
+            $images_rand = array();
+            foreach ($images_rand_key as $key) {
+                $images_rand[] = $images[$key];
+            }
+            print_r($images_rand);
+        	foreach ($images_rand as $image) {
                 $ext = explode('.', $image);
         		echo img(base_url('img/uploads/'.$ext[0]."_thumb.".$ext[1]));
         	}
