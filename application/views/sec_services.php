@@ -13,8 +13,8 @@
                     <i class="fa fa fa-building fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 class="service-heading">Architectural Visualization</h4>
-                <p class="text-muted">Our knowledge in computer software and design give us the resources 
-                    to provide the best quality 3D renders without having to pay a fortune.</p>
+                <p class="text-muted">Our combined knowledge in computer software and design allow us  
+		to provide the best quality Architectural vizualizations  at a highly competitive market price.</p>
             </div>
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
