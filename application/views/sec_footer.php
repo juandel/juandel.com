@@ -1,5 +1,5 @@
 <footer>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <span class="copyright">Copyright &copy; Your Website 2014</span>

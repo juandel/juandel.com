@@ -6,7 +6,7 @@ foreach ($head as $he) {
 
 ?>
 <section id="login">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             
         </div>

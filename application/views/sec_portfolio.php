@@ -1,5 +1,5 @@
 <section id="portfolio" class="bg-light-gray">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Portfolio</h2>
@@ -22,7 +22,7 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="<?=base_url()?>img/uploads/<?=$images[0]['name']?>" class="img-responsive" style="height:200px;">
+                            <img src="<?=base_url()?>img/uploads/<?=$images[0]['name']?>" class="img-responsive" >
                         </a>
                         <div class="portfolio-caption">
                             <h4><?=$work['title']?></h4>

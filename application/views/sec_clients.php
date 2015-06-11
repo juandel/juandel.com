@@ -1,5 +1,5 @@
 <aside class="clients">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <a href="https://www.macro.com.ar" target="_blank">
