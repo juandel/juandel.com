@@ -21,7 +21,7 @@
                             <div class="timeline-body">
                                 <p class="text-muted">.. and decide to <a href="#contact" class="page-scroll">contact us</a>.
                                                         Tell us about your project and what makes it special. 
-                                                        Send us any designs you mught have, either drafted or as CAD. 
+                                                        Send us any designs you might have, either drafted or as CAD. 
                                                         Don't forget to attach a few references to any media that might help illustrate what we'll be aiming for. </p>
                             </div>
                         </div>

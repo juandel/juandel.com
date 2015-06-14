@@ -35,18 +35,6 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <?php
-        $section = uri_string();
-        $ca = explode('/', $section);
 
-        if (count($ca)>1) {
-            $la = $ca[1];
-        }elseif(count($ca)<2){
-            $la = $ca[0];
-            if($ca[0] == "") {
-                $la = "web";
-            }
-        }
-    ?>
     <body>
-        <div class="container-page <?=$la?> container col-xs-12 col-md-10 col-lg-8 col-md col-md-offset-1 col-lg-offset-2">
+        <div class="container-page <?=get_working_uri_keyword()?> container col-xs-12 col-md-10 col-lg-8 col-md col-md-offset-1 col-lg-offset-2">

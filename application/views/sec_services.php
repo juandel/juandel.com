@@ -13,8 +13,8 @@
                     <i class="fa fa fa-building fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 class="service-heading">Architectural Visualization</h4>
-                <p class="text-muted">Our combined knowledge in computer software and design allow us  
-		to provide the best quality Architectural vizualizations  at a highly competitive market price.</p>
+                <p class="text-muted">Our combined knowledge in computer software and design allows us  
+		to provide the best quality Architectural visualizations  at a highly competitive market price.</p>
             </div>
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
@@ -22,7 +22,7 @@
                     <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 class="service-heading">3D Virtual tours</h4>
-                <p class="text-muted">Sometimes static renderings might fall short in capturing experimental and spacial qualities
+                <p class="text-muted">Sometimes static renderings might not capture experimental and spacial qualities
                 of a project. Imagine being able to, literally, be inside the building. This is where video games and architecture meet!</p>
             </div>
             <div class="col-md-4">
@@ -31,7 +31,7 @@
                     <i class="fa fa-life-ring fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 class="service-heading">Online support</h4>
-                <p class="text-muted">If your enterprise is more of a do it yourself organization we provide consultation and support
+                <p class="text-muted">If your enterprise is more of a "do it yourself" organization we provide consultancy and support
                     in the development of any project, either small or large scale.</p>
             </div>
         </div>
