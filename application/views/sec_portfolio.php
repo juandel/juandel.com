@@ -49,7 +49,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <i class="glyphicon glyphicon-picture" style=" height:200px; width:100%; text-align:center; font-size:190px; background:grey;"></i>
+                    <i class="glyphicon glyphicon-picture" style=" width:100%; text-align:center; font-size:140px; background:grey;"></i>
                     
                 </a>
                 <div class="portfolio-caption">

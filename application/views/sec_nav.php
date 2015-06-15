@@ -18,50 +18,50 @@
                             <a href="#page-top"></a>
                         </li>
                         
-                        <?php
-                            if (uri_string() =="web" || uri_string()=="" || uri_string()=="web/email") {
-                        ?>
+                    <?php
+                        if (uri_string() =="web" || uri_string()=="" || uri_string()=="web/email") {
+                    ?>
 
-                                <li>
-                                    <a class="page-scroll" href="#services">Services</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#workflow">Workflow</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#team">Team</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#contact">Contact</a>
-                                </li>
-                                <?php 
-                                if (isset($_SESSION['user_id'])){
-                                ?>
-                                    <li style="font-size:10px;">
-                                        <a class="page-scroll" href="<?=base_url('users/logout')?>">Log Out</a>
-                                    </li>  
-                                <?php 
-                                }else{
-                                ?>
-                                    <li style="font-size:10px;">
-                                        <a class="page-scroll" href="<?=base_url('users/login')?>">Log in</a>
-                                    </li>
-                                <?php } 
-
-                            }else{
-                        ?>
+                            <li>
+                                <a class="page-scroll" href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#workflow">Workflow</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#team">Team</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#contact">Contact</a>
+                            </li>
+                    <?php
+                        }else{
+                    ?>
 
                         <li>
                             <a class="page-scroll" href="<?=base_url()?>">Home</a>
                         </li>
                        
 
-                        <?php
-                            }
+                    <?php
+                        }
+                        if (isset($_SESSION['user_id'])){
                         ?>
+                            <li style="font-size:10px;">
+                                <a class="page-scroll" href="<?=base_url('users/logout')?>">Log Out</a>
+                            </li>  
+                    <?php 
+                        }else{
+                    ?>
+                            <li style="font-size:10px;">
+                                <a class="page-scroll" href="<?=base_url('users/login')?>">Log in</a>
+                            </li>
+                    <?php 
+                        }
+                    ?> 
 
                     </ul>
                 </div>

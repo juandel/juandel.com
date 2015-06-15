@@ -11,6 +11,9 @@ body {
 #page-top {
   padding: 0px;
 }
+.work-description {
+  min-height: 300px;
+}
 .text-muted {
   color: #777777;
 }

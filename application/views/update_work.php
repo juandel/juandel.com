@@ -1,4 +1,4 @@
-<section id="update_work">
+
     <?php 
       //Insert header into template
       foreach ($head as $he) {
@@ -6,8 +6,9 @@
       }
     ?>
 
-  <div class="container-fluid first-div-sec" style="background-color:rgb(247, 247, 247)">
-  	<div class="col-md-12" style="background-color:white">
+<section id="update_work" class="bg-light-gray">
+  <div class="container-fluid" style="padding:0px;">
+  	<div class="col-md-12">
   <?php 
 
   if (isset($feedback)) {
@@ -98,7 +99,7 @@
       if (count($images)) {
         foreach ($images as $image) {
         ?>
-          <div class="row col-md-4 col-sm-6 portfolio-item" style="padding: 0; margin:0;">
+          <div class="col-md-4 portfolio-item" style="padding: 0; margin:0;">
                 <a href="<?=base_url()?>img/uploads/<?=$image['name']?>" class="portfolio-link" data-toggle="modal" data-lightbox="images_works">
                     <img src="<?=base_url()?>img/uploads/<?=$image['name']?>" class="img-responsive" alt="">
                 </a>
@@ -121,18 +122,17 @@
       }else{
         echo "<p>No images for this work</p>";
       }
-        
-        div("", "col-md-12","border-top: solid thin black;margin-top:20px;");
-          div("", "form-group","padding-top:10px;");
-            echo form_label('Choose file', 'upload');
-            $data_upload = array(
-                          'name'        => 'images[]',
-                          'id'          => 'upload',
-                          'style'       => 'width:50%',
-                        );
-            echo form_upload($data_upload,'','multiple');
-            echo '<p style="color:grey; font-size:0.8em;">Choose all the files you want to upload with CTRL or SHIFT</p>';
-          div_c();
+          
+      div("", "col-md-12","border-top: solid thin black;margin-top:20px;");
+        div("", "form-group","padding-top:10px;");
+          echo form_label('Choose file', 'upload');
+          $data_upload = array(
+                        'name'        => 'images[]',
+                        'id'          => 'upload',
+                        'style'       => 'width:50%',
+                      );
+          echo form_upload($data_upload,'','multiple');
+          echo '<p style="color:grey; font-size:0.8em;">Choose all the files you want to upload with CTRL or SHIFT</p>';
         div_c();
       div_c(); 
     div_c();
@@ -152,10 +152,10 @@
 
   	</div>
   </div>
+</section>
   <?php 
   //Insert footer into template
   foreach ($footer as $foot) {
     echo $foot;
   }
   ?>
-</section>

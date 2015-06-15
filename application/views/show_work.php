@@ -1,5 +1,4 @@
-<section id="show_work">
-	<?php 
+<?php 
 		//Insert header into template
 		foreach ($head as $he) {
 		  echo $he;
@@ -7,7 +6,7 @@
 		if (isset($work[0])) {
 	?>
 
-		<div class="container-fluid" style=" padding:0;">
+		<div class="container-fluid" >
 			<div class="row container-fluid " style="padding:0;">
 
 				<?php 
@@ -28,10 +27,11 @@
 
 				?>
 			</div>
-			<div class="row container-fluid bg-light-gray" >
-				<h2><?=$work[0]['title']?></h2>
+			<div class="work-description row container-fluid bg-light-gray" >
+				<div class="row"></div>
+				<h2 ><?=$work[0]['title']?></h2>
 
-				<p><?=$work[0]['description']?></p>
+				<p class="col-md-6"><?=$work[0]['description']?></p>
 			</div>
 			<?php if (isset($_SESSION['user_id'])){ ?>
 				
