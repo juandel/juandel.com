@@ -37,4 +37,4 @@
     </head>
 
     <body>
-        <div class="container-page <?=get_working_uri_keyword()?> container col-xs-12 col-md-10 col-lg-8 col-md col-md-offset-1 col-lg-offset-2">
+        <div class="container-page <?=get_working_uri_keyword()?> container-fluid">
