@@ -37,4 +37,4 @@
     </head>
 
     <body>
-        <div class="container-page <?=get_working_uri_keyword()?> container-fluid">
+        <div class="container-page <?=get_working_uri_keyword()?> container">
