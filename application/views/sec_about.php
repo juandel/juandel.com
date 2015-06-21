@@ -28,7 +28,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="<?=base_url();?>img/about/2.jpg" alt="">
+                            <img class="img-circle img-responsive" src="<?=base_url();?>img/about/5.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
