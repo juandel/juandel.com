@@ -22,7 +22,7 @@
 		<!-- NIVO Slider -->
 		<script src="<?=base_url()?>js/jquery.nivo.slider.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			$(window).load(function() {
+			$(document).ready(function() {
 			    $('#slider').nivoSlider();
 			});
 		</script>
