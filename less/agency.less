@@ -6,7 +6,6 @@
 body {
 	overflow-x: hidden;
 	.body-font;
-	background-image: url('../img/logos/background-01.png');
 	padding: 0;
 	
 }
@@ -14,6 +13,7 @@ body {
 .container-page{
 	padding: 0;
 	background-color: white;
+	width: 100%;
 
 }
 #page-top{
@@ -109,6 +109,20 @@ h1, h2, h3, h4, h5, h6 {
         &.active {
         	color: darken(@brand-primary, 10%);
         }
+	}
+	.brand-link{
+		color: @brand-primary;
+		.script-font;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+        	color: darken(@brand-primary, 10%);
+        }
+       
+    	display:inline-block;
+    	font-size: 2.5em;
+    	text-decoration:none;	
 	}
 	.navbar-collapse {
 		border-color: fade(white, 2%);

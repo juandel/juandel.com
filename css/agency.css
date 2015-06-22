@@ -1,12 +1,16 @@
+/*nav color and brand in general*/
+/*subheading text*/
+/*text font*/
+/*heading text*/
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-image: url('../img/logos/background-01.png');
+  font-family: 'Open Sans', sans-serif;
   padding: 0;
 }
 .container-page {
   padding: 0;
   background-color: white;
+  width: 100%;
 }
 #page-top {
   padding: 0px;
@@ -165,6 +169,19 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
+  color: #93a6c9;
+}
+.navbar-default .brand-link {
+  color: #b5c2da;
+  font-family: 'Comfortaa', cursive;
+  display: inline-block;
+  font-size: 2.5em;
+  text-decoration: none;
+}
+.navbar-default .brand-link:hover,
+.navbar-default .brand-link:focus,
+.navbar-default .brand-link:active,
+.navbar-default .brand-link.active {
   color: #93a6c9;
 }
 .navbar-default .navbar-collapse {
