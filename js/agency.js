@@ -41,18 +41,17 @@ $(document).ready(function(){
 });
 
  $(document).on( "ready", function(e){
- 	$('.navbar-default').css('opacity', 0);
-	$('.nav-fix-height').remove();
-	$(document).on("scroll", function(){
+ 	if ($('.container-page').hasClass('web')) {
+ 		$('.navbar-default').css('opacity', 0);
+		$('.nav-fix-height').remove();
+		$(document).on("scroll", function(){
 		var position = $(document).scrollTop();
 		$('.navbar-default').css('opacity', (position / 300));
 	});
+ 	};
+ 	
 
- 	// if (!position < 400) {
- 		
-
- 	// };
- } )
+  } )
 
 	
 		
