@@ -8,7 +8,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand-link page-scroll" href="<?=base_url()?>" style="padding:0px;"><img src="<?=base_url();?>img/logos/jaddel.png" style="display:inline-block; width:80px; padding:5px; " >Jaddel</a>
+                    <a class="brand-link page-scroll" href="<?=base_url()?>" style="padding:0px;"><img src="<?=base_url();?>img/logos/jaddel_2d.png" style="display:inline-block; width:90px; padding:5px; " >Jaddel</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
