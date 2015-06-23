@@ -40,13 +40,19 @@ $(document).ready(function(){
 	}
 });
 
-// $(document).on( "scroll", function(e){
-// 	var position = $(document).scrollTop();
-// 	if (!position < 400) {
-// 		$('.navbar-default').css('opacity', (position / 300))
+ $(document).on( "ready", function(e){
+ 	$('.navbar-default').css('opacity', 0);
+	$('.nav-fix-height').remove();
+	$(document).on("scroll", function(){
+		var position = $(document).scrollTop();
+		$('.navbar-default').css('opacity', (position / 300));
+	});
 
-// 	};
-// } )
+ 	// if (!position < 400) {
+ 		
+
+ 	// };
+ } )
 
 	
 		
