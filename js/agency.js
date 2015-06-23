@@ -38,6 +38,15 @@ $(document).ready(function(){
 			};
 		});
 	}
-})
-		
+});
+
+// $(document).on( "scroll", function(e){
+// 	var position = $(document).scrollTop();
+// 	if (!position < 400) {
+// 		$('.navbar-default').css('opacity', (position / 300))
+
+// 	};
+// } )
+
+	
 		
