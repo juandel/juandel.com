@@ -40,18 +40,15 @@ $(document).ready(function(){
 	}
 });
 
- $(document).on( "ready", function(e){
- 	if ($('.container-page').hasClass('web')) {
- 		$('.navbar-default').css('opacity', 0);
+
+	if ($('.container-page').hasClass('web')) {
+		$('.navbar-default').css('opacity', 0);
 		$('.nav-fix-height').remove();
 		$(document).on("scroll", function(){
 			var position = $(document).scrollTop();
 			$('.navbar-default').css('opacity', (position / 300));
 		});
- 	};
- 	
-
-  } )
+	};
 
 	
 		
