@@ -224,13 +224,15 @@ fieldset[disabled] .btn-xl.active {
   background-color: #93a6c9;
 }
 .container > .navbar-header {
-  margin-right: -17px;
-  margin-left: 0;
+  margin-left: 100px;
+}
+.container > .navbar-header .jaddel_logo {
+  width: 80px;
+  height: 80px;
 }
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
-    padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
@@ -248,6 +250,9 @@ fieldset[disabled] .btn-xl.active {
   .navbar-default.navbar-shrink {
     background-color: #1c2631;
     padding: 10px 0;
+  }
+  .navbar-default.navbar-shrink .no-transparent {
+    background-color: #1c2631;
   }
 }
 .nav-fix-height {

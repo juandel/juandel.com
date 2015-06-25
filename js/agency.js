@@ -45,9 +45,9 @@ $(document).ready(function(){
  		$('.navbar-default').css('opacity', 0);
 		$('.nav-fix-height').remove();
 		$(document).on("scroll", function(){
-		var position = $(document).scrollTop();
-		$('.navbar-default').css('opacity', (position / 300));
-	});
+			var position = $(document).scrollTop();
+			$('.navbar-default').css('opacity', (position / 300));
+		});
  	};
  	
 

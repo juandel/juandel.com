@@ -168,14 +168,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 .container>.navbar-header {
-  margin-right: -17px;
-  margin-left: 0;
+	margin-left: 100px;
+  .jaddel_logo{
+  	width: 80px;
+  	height: 80px;
+  }
 }
 
 @media(min-width:768px) {
     .navbar-default {
     	background-color: transparent;
-        padding: 25px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
@@ -195,7 +197,10 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px 0;
 		.navbar-brand {
 	        
-	    }    
+	    }  
+	.no-transparent{
+		background-color: @gray-darkest;
+	}  
 	}
 }
 .nav-fix-height{
