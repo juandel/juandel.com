@@ -26,7 +26,7 @@
                         </li>
                         
                     <?php
-                        if (uri_string() =="web" || uri_string()=="" || uri_string()=="web/email") {
+                        if (uri_string() =="web" || uri_string()=="" ) {
                     ?>
 
                             <li>
