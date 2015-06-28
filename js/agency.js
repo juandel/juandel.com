@@ -50,5 +50,11 @@ $(document).ready(function(){
 		});
 	};
 
-	
+// Make lightbox background on scroll
+
+// $(document).on("scroll", function(){
+// 	if ($('#leaf').length == 0) {
+// 		$('body').append('<div id="leaf" style="position:fixed; width:100%; height:100%; z-index:1030; background-color:black;top:0px;opacity:0.8;"></div>')
+// 	};
+// })	
 		

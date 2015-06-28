@@ -99,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default {
 	background-color: @gray-darkest;
 	border-color: transparent;
+	padding-bottom: 0px;
 
 	.navbar-brand {
 		color: @brand-primary;
@@ -127,12 +128,12 @@ h1, h2, h3, h4, h5, h6 {
 	.navbar-collapse {
 		border-color: fade(white, 2%);
 		ul.navbar-nav{
-			margin: 20px 0px;
 		}
 	}
 	.navbar-toggle {
 		background-color: @brand-primary;
 		border-color: @brand-primary;
+		margin-top: 13px;
 		.icon-bar {
 			background-color: white;
 		}
@@ -168,12 +169,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 .container>.navbar-header {
-	margin-left: 100px;
-  .jaddel_logo{
-  	width: 80px;
-  	height: 80px;
-  }
+	a.brand-link{
+		height: 65px;
+		.jaddel_logo{
+		padding-left: 10px;
+		width: 65px;
+	}
+	}
+	
 }
+
 
 @media(min-width:768px) {
     .navbar-default {
@@ -195,16 +200,14 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-default.navbar-shrink {
     	background-color: @gray-darkest;
         padding: 10px 0;
+        padding-bottom: 0px;
 		.navbar-brand {
 	        
 	    }  
-	.no-transparent{
-		background-color: @gray-darkest;
-	}  
+		.no-transparent{
+			background-color: @gray-darkest;
+		}  
 	}
-}
-.nav-fix-height{
-	height: 90px;
 }
 .alert .alert-danger{
 	background-color:white; 

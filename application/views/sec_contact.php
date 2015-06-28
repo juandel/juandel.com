@@ -78,9 +78,12 @@
                             $data_submit_contact = array(
                                           'name'        => 'submit_contact',
                                           'class'       => 'btn btn-xl',
-                                          'value'       => 'Create work',
+                                          'id'          => 'contact_button',
+                                          'value'       => 'Contact Us',
+                                          'type'        => 'submit',
+                                          'content'     => '<span class="fa fa-send fa-2x"></span>'
                                         );
-                            echo form_submit($data_submit_contact);
+                            echo form_button($data_submit_contact);
                         div_c();
                     div_c();   
                 echo form_close();

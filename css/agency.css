@@ -160,6 +160,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
   background-color: #1c2631;
   border-color: transparent;
+  padding-bottom: 0px;
 }
 .navbar-default .navbar-brand {
   color: #a7d5fc;
@@ -187,12 +188,10 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
-.navbar-default .navbar-collapse ul.navbar-nav {
-  margin: 20px 0px;
-}
 .navbar-default .navbar-toggle {
   background-color: #a7d5fc;
   border-color: #a7d5fc;
+  margin-top: 13px;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
@@ -223,12 +222,12 @@ fieldset[disabled] .btn-xl.active {
   color: white;
   background-color: #76bdfa;
 }
-.container > .navbar-header {
-  margin-left: 100px;
+.container > .navbar-header a.brand-link {
+  height: 65px;
 }
-.container > .navbar-header .jaddel_logo {
-  width: 80px;
-  height: 80px;
+.container > .navbar-header a.brand-link .jaddel_logo {
+  padding-left: 10px;
+  width: 65px;
 }
 @media (min-width: 768px) {
   .navbar-default {
@@ -250,13 +249,11 @@ fieldset[disabled] .btn-xl.active {
   .navbar-default.navbar-shrink {
     background-color: #1c2631;
     padding: 10px 0;
+    padding-bottom: 0px;
   }
   .navbar-default.navbar-shrink .no-transparent {
     background-color: #1c2631;
   }
-}
-.nav-fix-height {
-  height: 90px;
 }
 .alert .alert-danger {
   background-color: white;
