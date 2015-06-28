@@ -44,6 +44,7 @@ $(document).ready(function(){
 	if ($('.container-page').hasClass('web')) {
 		$('.navbar-default').css('opacity', 0);
 		$('.nav-fix-height').remove();
+		$('.jumbotron').remove();
 		$(document).on("scroll", function(){
 			var position = $(document).scrollTop();
 			$('.navbar-default').css('opacity', (position / 300));
