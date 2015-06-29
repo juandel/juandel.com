@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <div class="container-fluid slider-div theme-showcase" style="padding:0px;">
         <!-- <div class="intro-text">
             <div class="intro-lead-in" style="visibility:hidden;font-size:5em;font-family: Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif; font-style:normal;"><?=page_title()?></div>

@@ -7,7 +7,6 @@
 
 		<!-- Plugin JavaScript -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		<script src="<?=base_url()?>js/classie.js"></script>
 
 		<!-- Contact Form JavaScript -->
 		<script src="<?=base_url()?>js/jqBootstrapValidation.js"></script>

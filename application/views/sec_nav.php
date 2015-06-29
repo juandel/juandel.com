@@ -8,7 +8,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand-link page-scroll" href="<?=base_url()?>" style="padding:0px;">
+                    <a class="brand-link page-scroll" href="<?php 
+                                                        if (uri_string() =="web" || uri_string()=="" ){
+                                                            echo '#header';
+                                                        }else{
+                                                            echo base_url();
+                                                        }?>" style="padding:0px;">
                         <!-- <img src="<?=base_url();?>img/logos/jaddel_2d.png" style="display:inline-block; width:90px; padding:5px; " >Jaddel -->
                         <div class="jaddel_logo">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426 425.667" >
