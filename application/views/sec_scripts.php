@@ -12,7 +12,6 @@
 		<!-- Contact Form JavaScript -->
 		<script src="<?=base_url()?>js/jqBootstrapValidation.js"></script>
 
-
 		<!-- Custom Theme JavaScript -->
 		<script src="<?=base_url()?>js/agency.js"></script>
 
