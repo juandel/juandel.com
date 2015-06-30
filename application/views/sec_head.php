@@ -26,6 +26,8 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?=base_url()?>css/nivo-slider.css" type="text/css" />
+        <link href="<?=base_url()?>css/slideme.css" rel="stylesheet"/>
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

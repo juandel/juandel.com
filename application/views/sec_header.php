@@ -8,21 +8,31 @@
             <h1>Jaddel</h1>
             <p>Architectural Visualization</p>
         </div>
-        <div id="slider" class="nivoSlider">
-        	<?php
-            $images_rand_key = array_rand($images, 4);
-            // print_r($images_rand_key);
-            // print_r($images);
-            $images_rand = array();
-            foreach ($images_rand_key as $key) {
-                $images_rand[] = $images[$key];
-            }
-            // print_r($images_rand);
-        	foreach ($images_rand as $image) {
-                $ext = explode('.', $image);
-        		echo img(base_url('img/uploads/'.$ext[0]."_thumb.".$ext[1]));
-        	}
-        	 ?>
+        <div id="slider" >
+            <ul class="slideme">
+                <?php
+                $images_rand_key = array_rand($images, 4);
+                $images_rand = array();
+
+                foreach ($images_rand_key as $key) {
+                    $images_rand[] = $images[$key];
+                }
+
+                foreach ($images_rand as $image) {
+                    $ext = explode('.', $image);
+                    echo "<li>";
+                    $image_properties = array(
+                        'src'   => base_url('img/uploads/'.$ext[0]."_thumb.".$ext[1]),
+                        'alt'   => 'jaddel_slider_image'.$ext[0],
+                        'title' => 'title_'.$ext[0],
+                        'style' => 'width:100%;'
+                    );
+                    echo img($image_properties);
+                    echo "</li>";
+                }
+             ?>
+            </ul>
+        	
 		    <!-- <img src="images/slide1.jpg" alt="" /> -->
 		</div>
 
