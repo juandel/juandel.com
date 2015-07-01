@@ -24,7 +24,6 @@
                     $image_properties = array(
                         'src'   => base_url('img/uploads/'.$ext[0]."_thumb.".$ext[1]),
                         'alt'   => 'jaddel_slider_image'.$ext[0],
-                        'title' => 'title_'.$ext[0],
                         'style' => 'width:100%;'
                     );
                     echo img($image_properties);
