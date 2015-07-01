@@ -17,10 +17,10 @@
 		<!-- Lightbox -->
 		<script src="<?=base_url()?>js/lightbox.min.js"></script>
 		<?php 
-		$slider = array(1,0); 
-		$slider_rand_key = array_rand($slider, 1);
-		echo ($slider_rand_key);
-		if ($slider[$slider_rand_key]<1) {
+		// $slider = array(1,0); 
+		// $slider_rand_key = array_rand($slider, 1);
+		// echo ($slider_rand_key);
+		// if ($slider[$slider_rand_key]<1) {
 		?>
 
 
@@ -50,21 +50,22 @@
 		</script>
 
 		<?php
-		}else{
+		// }else{
 		?>
 		
-		<!-- NIVO Slider  -->
+		<!-- NIVO Slider  
 
-		<script src="<?=base_url()?>js/jquery.nivo.slider.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-			    $('#slider').nivoSlider();
-			});
-		</script>
+		 <script src="<?=base_url()?>js/jquery.nivo.slider.js" type="text/javascript"></script>
+		 <script type="text/javascript">
+		// 	$(document).ready(function() {
+		// 	    $('#slider').nivoSlider();
+		// 	});
+		// </script>
 
 		<?php
-		}
+		// }
 		?>
+		-->
 
 		<!-- Google Analytics -->
 		<script>
