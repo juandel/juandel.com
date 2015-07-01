@@ -658,6 +658,9 @@ section#contact :-ms-input-placeholder {
 section#contact .text-danger {
   color: #e74c3c;
 }
+section#contact #contact_button {
+  margin-top: 30px;
+}
 footer {
   padding: 25px 0;
   text-align: center;

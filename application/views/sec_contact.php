@@ -94,6 +94,7 @@
         </div>
         <div class="col-lg-12 text-center">
           <p class="section-subheading text-muted" style="margin-top:60px; color:white; opacity:0.5;">Our form really works and we have people ready to get back to you</p>
+          <h3 class="section-subheading" style="color:white;">contact@jaddel.com</h3>
         </div>
     </div>
 </section>
