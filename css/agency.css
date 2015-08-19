@@ -353,6 +353,9 @@ section h3.section-subheading {
   margin: 15px 0;
   text-transform: none;
 }
+#services .container-fluid p.text-muted {
+  font-size: 1.3em;
+}
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
@@ -528,6 +531,9 @@ section h3.section-subheading {
     padding: 0 20px 20px 30px;
     text-align: right;
   }
+  .timeline > li .timeline-panel .timeline-body p.text-muted {
+    font-size: 1.3em;
+  }
   .timeline > li .timeline-image {
     width: 100px;
     height: 100px;
@@ -553,9 +559,9 @@ section h3.section-subheading {
     padding: 0 20px 20px;
   }
   .timeline > li .timeline-image {
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
   }
   .timeline > li .timeline-image h4 {
     font-size: 18px;
@@ -574,12 +580,12 @@ section h3.section-subheading {
     padding: 0 20px 20px 100px;
   }
   .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
   }
   .timeline > li .timeline-image h4 {
-    margin-top: 40px;
+    margin-top: 55px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
@@ -601,8 +607,17 @@ section h3.section-subheading {
 .team-member p {
   margin-top: 0;
 }
+aside.clients div.clients {
+  margin: 20px 0px;
+}
 aside.clients img {
   margin: 50px auto;
+  height: 50px;
+}
+aside.clients p {
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto;
 }
 section#contact {
   background-color: #1c2631;

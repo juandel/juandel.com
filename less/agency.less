@@ -320,6 +320,13 @@ section {
 	margin: 15px 0;
 	text-transform: none;
 }
+#services{
+	.container-fluid{
+		p.text-muted{
+			font-size: 1.3em;
+		}
+	}
+}
 
 // Portfolio Section
 
@@ -510,6 +517,11 @@ section {
 	            float: left;
 	            padding: 0 20px 20px 30px;
 	            text-align: right;
+	            .timeline-body{
+	            	p.text-muted{
+	            		font-size: 1.3em;
+	            	}
+	            }
 	        }
 	        .timeline-image {
 	            width: 100px;
@@ -539,9 +551,9 @@ section {
 	            padding: 0 20px 20px;
 	        }
 	        .timeline-image {
-	            width: 150px;
-	            height: 150px;
-	            margin-left: -75px;
+	            width: 200px;
+	            height: 200px;
+	            margin-left: -100px;
 	            h4 {
             		font-size: 18px;
 	            	margin-top: 30px;
@@ -563,11 +575,11 @@ section {
 	            padding: 0 20px 20px 100px;
 	        }
 	        .timeline-image {
-	            width: 170px;
-	            height: 170px;
-	            margin-left: -85px;
+	            width: 200px;
+	            height: 200px;
+	            margin-left: -100px;
 	            h4 {
-	            	margin-top: 40px;
+	            	margin-top: 55px;
 	            }
 	        }
 	        &.timeline-inverted > .timeline-panel {
@@ -599,8 +611,18 @@ section {
 // Clients Aside
 
 aside.clients {
+	div.clients{
+		margin: 20px 0px;
+	}
+
 	img {
 		margin: 50px auto;
+		height: 50px;
+	}
+	p{
+		font-style: italic;
+		text-align: center;
+		margin: 30px auto;
 	}
 }
 
