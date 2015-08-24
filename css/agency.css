@@ -610,6 +610,9 @@ section h3.section-subheading {
 aside.clients div.clients {
   margin: 20px 0px;
 }
+aside.clients .row {
+  padding: 60px;
+}
 aside.clients img {
   margin: 50px auto;
   height: 50px;
@@ -623,6 +626,27 @@ section#contact {
   background-color: #1c2631;
   background-image: url('../img/logos/background-01.png');
   background-position: center;
+}
+section#contact .promo-outer {
+  height: 180px;
+  /*width:320px;*/
+  background-color: #FAAC76;
+  position: relative;
+  top: -150px;
+  /*left:50px;*/
+  padding: 5px;
+  box-shadow: 3px 3px 3px grey;
+}
+section#contact .promo {
+  border: white 2px dotted;
+  padding: 20px;
+  height: 100%;
+  /*width:100%;*/
+  position: relative;
+  /*top:-150px;*/
+  /*left:10.5px;*/
+  color: #1c2631;
+  text-align: center;
 }
 section#contact .section-heading {
   color: white;
