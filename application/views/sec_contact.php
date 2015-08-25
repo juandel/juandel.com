@@ -3,7 +3,7 @@
     <div class="promo" style="">
       <h3>Limited time offer:</h3>
       <h5>For every 3 images you'll get the fourth free of charge!!!</h5>
-      <p>Promotion valid either online or by phone.</p>
+      <p>Promotion valid online.</p>
     </div>
   </aside>
   
