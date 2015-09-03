@@ -32,11 +32,17 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="row container-fluid" style="padding:0px;">
-                            <h3 class="container" style="margin:-6px 130px auto;">
-                                <a class="btn btn-info" href="<?=base_url().'web/update_member/'.$team_member['id']?>">Update info</a>
-                            </h3>
-                        </div>
+                        <?php
+                        if (isset($_SESSION['user_id'])){ 
+                        ?>
+                            <div class="row container-fluid" style="padding:0px;">
+                                <h3 class="container" style="margin:-6px 130px auto;">
+                                    <a class="btn btn-info" href="<?=base_url().'web/update_member/'.$team_member['id']?>">Update info</a>
+                                </h3>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 <?php
                 } 
