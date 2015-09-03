@@ -35,7 +35,7 @@
                     ?>
 
                             <li>
-                                <a class="page-scroll" href="#services">Services</a>
+                                <a class="page-scroll" href="#services" style="background-color:transparent;">Services</a>
                             </li>
                             <li>
                                 <a class="page-scroll" href="#portfolio">Portfolio</a>

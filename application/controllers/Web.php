@@ -5,7 +5,7 @@ class Web extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model(array('Images_model', 'Works_model'));
+		$this->load->model(array('Images_model', 'Works_model', 'Team_model'));
 		$this->load->helper(array('form','html'));
 	}
 	/**
@@ -165,7 +165,97 @@ class Web extends MY_Controller {
 
 	private function team()
 	{
-		return $this->load->view('sec_team',NULL,TRUE);
+		$data['team_members'] = $this->Team_model->get_team_members();
+		return $this->load->view('sec_team',$data,TRUE);
+	}
+
+	public function add_team_member(){
+		$data['head']=$this->top_template();
+		$data['footer']=$this->bottom_template();
+		
+		if (isset($_POST['submit_team_member'])){
+			// Get data from Form
+			$data['name']=$this->input->post('name');
+			$data['position']=$this->input->post('position');
+			$data['facebook']=$this->input->post('facebook');
+			$data['linkedin']=$this->input->post('linkedin');
+
+			
+			$this->load->library('image_lib');
+
+			// Set config for file upload
+			$config['upload_path'] = './img/team/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['overwrite']=TRUE;
+			$config['max_size']	= '800';
+			$config['max_width']  = '225';
+			$config['max_height']  = '225';
+
+			// Load upload Library
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('image_path'))
+                {
+                        $data['error'] = $this->upload->display_errors();
+
+                        $this->load->view('add_team_member', $data);                }
+                else
+                {
+                        $data['upload_data'] = $this->upload->data();
+                        $data['image_path'] = $data['upload_data']['file_name'];  
+                }
+
+                $this->Team_model->add_team_member($data['name'], $data['position'], $data['facebook'], $data['linkedin'], $data['image_path']);
+
+                $this->load->view('add_team_member', $data);
+		}else{
+			$this->load->view('add_team_member', $data);
+		}
+	}
+
+	public function update_member($id){
+		$data['head']=$this->top_template();
+		$data['footer']=$this->bottom_template();
+
+		$data['team_member'] = $this->Team_model->get_team_member($id);
+
+		if (isset($_POST['submit_team_member_edit'])){
+			// Get data from Form
+			$data['name']=$this->input->post('name');
+			$data['position']=$this->input->post('position');
+			$data['facebook']=$this->input->post('facebook');
+			$data['linkedin']=$this->input->post('linkedin');
+
+			
+			$this->load->library('image_lib');
+
+			// Set config for file upload
+			$config['upload_path'] = './img/team/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['overwrite']=TRUE;
+			$config['max_size']	= '800';
+			$config['max_width']  = '225';
+			$config['max_height']  = '225';
+
+			// Load upload Library
+			$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('image_path')){
+                        $data['error'] = $this->upload->display_errors();
+                        $data['image_path'] = $data['team_member']['image_path'];
+                        $this->load->view('update_team_member', $data);                }
+            else
+            {
+                    $data['upload_data'] = $this->upload->data();
+                    $data['image_path'] = $data['upload_data']['file_name'];  
+            }
+
+            $this->Team_model->update_team_member($data['name'], $data['position'], $data['facebook'], $data['linkedin'], $data['image_path'], $id );
+            
+            $this->load->view('update_team_member', $data);
+		}else{
+			$this->load->view('update_team_member', $data);
+		}
 	}
 
 	private function clients()
