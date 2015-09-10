@@ -14,7 +14,9 @@
                 </span>
                 <h4 class="service-heading">Architectural Visualization</h4>
                 <p class="text-muted">Our combined knowledge in computer software and design allows us  
-		to provide the best quality Architectural visualizations  at a highly competitive market price.</p>
+		          to provide the best quality Architectural visualizations  at a highly competitive market 
+                  price.
+                </p>
             </div>
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
