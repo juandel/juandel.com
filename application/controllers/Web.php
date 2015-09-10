@@ -88,7 +88,7 @@ class Web extends MY_Controller {
 				// email config params
 				$config = array('protocol' => 'smtp',
 							'smtp_host' => 'smtp.mandrillapp.com',
-							'smtp_port' => 25,
+							'smtp_port' => 2525,
 							'smtp_user' => 'social@jaddel.com',
 							'smtp_pass' => 'GVNAGR1NFAzbReB3M9Pjlw'
 							);
