@@ -65,6 +65,7 @@ class Web extends MY_Controller {
 	                     'rules'   => 'required'
 	                  )
 	        );
+
 			$this->form_validation->set_rules($config_validation);
 			$this->form_validation->set_error_delimiters('<div class="alert alert-danger" style="background:none; 
   border:none" >', '</div>');
@@ -85,29 +86,77 @@ class Web extends MY_Controller {
 				$this->load->model('Clients_model');
 				$this->Clients_model->set_client($data['email'],$data['name'], $data['location']);
 				
+				// Email config
+
+				    // $this->load->library('email');
+				    
+				// Mandrill
+
+				    $this->load->config('mandrill');
+
+					$this->load->library('mandrill');
+
+					$mandrill_ready = NULL;
+
+				try {
+
+					$this->mandrill->init( $this->config->item('mandrill_api_key') );
+					$mandrill_ready = TRUE;
+					
+				} catch(Mandrill_Exception $e) {
+
+					$mandrill_ready = FALSE;
+					
+				}
+
+				if( $mandrill_ready ) {
+
+					//Send us some email!
+					$email = array(
+						'html' => '<h2>Message:</h2><p>'.$data['message']."</p><br><h4>Customer's location: ". $data['location'].'<h4>', //Consider using a view file
+						'text' => $data['message']."Customer's location: ". $data['location'],
+						'subject' => 'Jaddel.com - Contact form',
+						'from_email' => $data['email'],
+						'from_name' => $data['name'],
+						'to' => array(array('email' => 'juandel@gmail.com' )) //Check documentation for more details on this one
+						//'to' => array(array('email' => 'joe@example.com' ),array('email' => 'joe2@example.com' )) //for multiple emails
+						);
+
+					$result = $this->mandrill->messages_send($email);
+					
+				}
+				   
+				    if($result){
+					$data['sent'] = "Your email was sent correctly";		
+					}else{
+					$data['fail'] = "there was a problem sending the email: ".show_error($this->email->print_debugger());
+					}	
+			
+				
 				// email config params
-				$config = array('protocol' => 'smtp',
-							'smtp_host' => 'smtp.mandrillapp.com',
-							'smtp_port' => 2525,
-							'smtp_user' => 'social@jaddel.com',
-							'smtp_pass' => 'GVNAGR1NFAzbReB3M9Pjlw'
-							);
+				// $config = array('protocol' => 'smtp',
+				// 			'smtp_host' => 'smtp.mandrillapp.com',
+				// 			'smtp_port' => 2525,
+				// 			'smtp_user' => 'social@jaddel.com',
+				// 			'smtp_pass' => 'GVNAGR1NFAzbReB3M9Pjlw'
+				// 			);
+				
 				// call email library and pass config
-				$this->load->library('email', $config);
+				// $this->load->library('email', $config);
 				// fix for starting an email
-				$this->email->set_newline("\r\n");
+				// $this->email->set_newline("\r\n");
 				// Filling out headers of email and message
-				$this->email->from($data['email']);
-				$this->email->to('juandel@gmail.com');
-				$this->email->subject('jaddel.com- contact form');
-				$this->email->message($data['message']."\nCustomer's location: ". $data['location']);
+				// $this->email->from($data['email']);
+				// $this->email->to('juandel@gmail.com');
+				// $this->email->subject('jaddel.com- contact form');
+				// $this->email->message($data['message']."\nCustomer's location: ". $data['location']);
 
 				// Send email and check if it was send 
-				if($this->email->send()){
-					$data['sent'] = "Your email was sent correctly";		
-				}else{
-					$data['fail'] = "there was a problem sending the email: ".show_error($this->email->print_debugger());
-				}	
+				// if($this->email->send()){
+				// 	$data['sent'] = "Your email was sent correctly";		
+				// }else{
+				// 	$data['fail'] = "there was a problem sending the email: ".show_error($this->email->print_debugger());
+				// }	
 			}
 
 			
