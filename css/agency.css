@@ -45,7 +45,8 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #76bdfa;
+  /*color: darken(@brand-primary, 10%);*/
+  color: red;
 }
 h1,
 h2,
@@ -215,12 +216,12 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
-  background-color: #a7d5fc;
+  background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #76bdfa;
+  color: #a7d5fc;
+  background-color: transparent;
 }
 .container > .navbar-header a.brand-link {
   height: 65px;
@@ -699,6 +700,13 @@ section#contact .text-danger {
 }
 section#contact #contact_button {
   margin-top: 30px;
+}
+section#contact a {
+  text-decoration: none;
+  color: #a7d5fc;
+}
+section#contact a:hover {
+  color: #76bdfa;
 }
 footer {
   padding: 25px 0;
