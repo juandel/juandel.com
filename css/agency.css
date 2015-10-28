@@ -629,6 +629,7 @@ section#contact {
   background-position: center;
 }
 section#contact .promo-outer {
+  visibility: hidden;
   height: 180px;
   /*width:320px;*/
   background-color: #FAAC76;
