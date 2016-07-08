@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Architectural renderings photo realistic visualizations. ">
         <meta name="author" content="Juan Delgado">
+        <meta name="google-site-verification" content="1unp6FKY_VI0wE3iZfxG-0CWHlPKd3BDbEOIk4E7SN8" />
+
 
         <title>Jaddel - Architectural rendering</title>
 
