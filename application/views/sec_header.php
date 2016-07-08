@@ -35,4 +35,6 @@
 		    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
 		</div> -->
     </div>
+    <meta name="google-site-verification" content="1unp6FKY_VI0wE3iZfxG-0CWHlPKd3BDbEOIk4E7SN8" />
+
 </header>
