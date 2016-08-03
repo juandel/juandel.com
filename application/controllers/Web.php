@@ -113,10 +113,10 @@ class Web extends MY_Controller {
 
 					//Send us some email!
 					$email = array(
-						'html' => '<h2>Message:</h2><p>'.$data['message']."</p><br><h4>Customer's location: ". $data['location'].'<h4>', //Consider using a view file
-						'text' => $data['message']."Customer's location: ". $data['location'],
+						'html' => '<h2>Message:</h2><p>'.$data['message']."</p><br><h4>Customer's location: ". $data['location'].'<h5>'."<br><h4>Customer's email: ". $data['email'].'<h5>', //Consider using a view file
+						'text' => $data['message']."Customer's location: ". $data['location']." Customer's email: ".$data['email'],
 						'subject' => 'Jaddel.com - Contact form',
-						'from_email' => $data['email'],
+						'from_email' => 'contact@jaddel.com',
 						'from_name' => $data['name'],
 						'to' => array(array('email' => 'juandel@gmail.com' )) //Check documentation for more details on this one
 						//'to' => array(array('email' => 'joe@example.com' ),array('email' => 'joe2@example.com' )) //for multiple emails
@@ -171,6 +171,7 @@ class Web extends MY_Controller {
 	{	
 		$this->load->helper('html');
 		$images= $this->Images_model->get_image_names();
+		print_r(count($images));
 		$images_names = array();
 		
 		foreach ($images as $value) {
