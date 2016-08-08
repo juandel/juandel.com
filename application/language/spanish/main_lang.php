@@ -1,4 +1,5 @@
 <?php 
+// SPANISH
 
 $lang['link_01']='Servicios';
 $lang['link_02']='Portfolio';

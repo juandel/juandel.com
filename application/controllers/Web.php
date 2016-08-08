@@ -25,6 +25,15 @@ class Web extends MY_Controller {
 	 */
 	public function index()
 	{	
+		// Core - MY_Controller-Father Class
+		
+		$lang=$this->session->set_userdata($this->input->get(NULL, TRUE));
+		// print_r($this->session->userdata('lang'));
+		if ($this->session->userdata('lang') == 'sp') {
+			$this->lang->load('main_lang', 'spanish');
+		}else{
+			$this->lang->load('main_lang', 'english');
+		}
 		$data['head']=$this->top_template();
 		$data['footer']=$this->bottom_template();
 		$data['header']=$this->header();
@@ -67,8 +76,7 @@ class Web extends MY_Controller {
 	        );
 
 			$this->form_validation->set_rules($config_validation);
-			$this->form_validation->set_error_delimiters('<div class="alert alert-danger" style="background:none; 
-  border:none" >', '</div>');
+			$this->form_validation->set_error_delimiters('<div class="alert alert-danger" style="background:none; border:none" >', '</div>');
 			// Check to see if validation OR upload failed
 			if ($this->form_validation->run() == FALSE){
 				
@@ -171,7 +179,7 @@ class Web extends MY_Controller {
 	{	
 		$this->load->helper('html');
 		$images= $this->Images_model->get_image_names();
-		print_r(count($images));
+		// print_r(count($images));
 		$images_names = array();
 		
 		foreach ($images as $value) {
@@ -180,7 +188,6 @@ class Web extends MY_Controller {
 
 		$data['images']= $images_names;
 		return $this->load->view('sec_header',$data, TRUE);
-
 	}
 	
 	private function services()

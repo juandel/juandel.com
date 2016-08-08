@@ -26,8 +26,14 @@ class MY_Controller extends CI_Controller {
 	}
 
 	private function nav()
-	{
-		return $this->load->view('sec_nav',NULL, TRUE);
+	{  
+        $data['link01']=$this->lang->line('link_01');
+        $data['link02']=$this->lang->line('link_02');
+        $data['link03']=$this->lang->line('link_03');
+        $data['link04']=$this->lang->line('link_04');
+        $data['link05']=$this->lang->line('link_05');
+
+		return $this->load->view('sec_nav',$data, TRUE);
 	}
 
 	private function footer()
