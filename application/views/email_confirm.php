@@ -14,7 +14,7 @@ foreach ($head as $he) {
         <i class="fa fa fa-envelope fa-stack-1x fa-inverse"></i>
     </span>
 	<?php
-		echo '<h4 class="section-subheading text-muted">We will be contacting you shortly, Thanks!<h4/>';
+		echo '<h4 class="section-subheading text-muted"><h4/>';
 	}elseif (isset($fail)) {
 		echo $fail;
 	}
