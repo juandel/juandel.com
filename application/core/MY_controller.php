@@ -32,6 +32,7 @@ class MY_Controller extends CI_Controller {
         $data['link03']=$this->lang->line('link_03');
         $data['link04']=$this->lang->line('link_04');
         $data['link05']=$this->lang->line('link_05');
+        // navbar links
 
 		return $this->load->view('sec_nav',$data, TRUE);
 	}
