@@ -192,11 +192,25 @@ class Web extends MY_Controller {
 	
 	private function services()
 	{
-		return $this->load->view('sec_services',NULL, TRUE);
+		// Get language text
+		$data['sec_serv_title_01'] = $this->lang->line('sec_serv_title_01');
+		$data['sec_serv_subtitle'] = $this->lang->line('sec_serv_subtitle');
+		$data['descr_serv_subtitle_01'] = $this->lang->line('descr_serv_subtitle_01');
+		$data['descr_serv_01'] = $this->lang->line('descr_serv_01');
+		$data['descr_serv_subtitle_02'] = $this->lang->line('descr_serv_subtitle_02');
+		$data['descr_serv_02'] = $this->lang->line('descr_serv_02');
+		$data['descr_serv_subtitle_03'] = $this->lang->line('descr_serv_subtitle_03');
+		$data['descr_serv_03'] = $this->lang->line('descr_serv_03');
+
+		return $this->load->view('sec_services',$data, TRUE);
 	}
 
 	private function portfolio()
 	{	
+		// Get language text
+		$data['sec_port_title_01'] = $this->lang->line('sec_port_title_01');
+		$data['sec_port_subtitle'] = $this->lang->line('sec_port_subtitle');
+
 		// Get all works
 		$data['in_works'] = $this->Works_model->get_works();
 		// Get images from DB where work_id equals works id
@@ -217,11 +231,26 @@ class Web extends MY_Controller {
 
 	private function about()
 	{
-		return $this->load->view('sec_about',NULL,TRUE);
+		$data['sec_wf_title_01'] = $this->lang->line('sec_wf_title_01');
+		$data['sec_wf_subtitle'] = $this->lang->line('sec_wf_subtitle');
+		$data['descr_wf_heading_01'] = $this->lang->line('descr_wf_heading_01');
+		$data['descr_wf_01'] = $this->lang->line('descr_wf_01');
+		$data['descr_wf_heading_02'] = $this->lang->line('descr_wf_heading_02');
+		$data['descr_wf_02'] = $this->lang->line('descr_wf_02');
+		$data['descr_wf_heading_03'] = $this->lang->line('descr_wf_heading_02');
+		$data['descr_wf_03'] = $this->lang->line('descr_wf_03');
+		$data['descr_wf_heading_04'] = $this->lang->line('descr_wf_heading_02');
+		$data['descr_wf_04'] = $this->lang->line('descr_wf_04');
+		$data['footer_wf'] = $this->lang->line('footer_wf');
+
+		return $this->load->view('sec_about',$data,TRUE);
 	}
 
 	private function team()
 	{
+		$data['sec_team_title_01'] = $this->lang->line('sec_team_title_01');
+		$data['sec_team_subtitle'] = $this->lang->line('sec_team_subtitle');
+
 		$data['team_members'] = $this->Team_model->get_team_members();
 		return $this->load->view('sec_team',$data,TRUE);
 	}
@@ -323,8 +352,17 @@ class Web extends MY_Controller {
 
 	private function contact()
 	{
+		
+		$data['sec_contact_title_01'] = $this->lang->line('sec_contact_title_01');
+		$data['sec_contact_subtitle'] = $this->lang->line('sec_contact_subtitle');
+		$data['sec_contact_name'] = $this->lang->line('sec_contact_name');
+		$data['sec_contact_email'] = $this->lang->line('sec_contact_email');
+		$data['sec_contact_location'] = $this->lang->line('sec_contact_location');
+		$data['sec_contact_comment'] = $this->lang->line('sec_contact_comment');
+		$data['sec_contact_submit'] = $this->lang->line('sec_contact_submit');		
+		$data['sec_contact_footer'] = $this->lang->line('sec_contact_footer');
 
-		return $this->load->view('sec_contact',NULL,TRUE);
+		return $this->load->view('sec_contact',$data,TRUE);
 	}
 
 

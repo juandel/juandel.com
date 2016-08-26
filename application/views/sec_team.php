@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Our Nerdy Team</h2>
-                <h3 class="section-subheading text-muted">Proud to live in front of our monitors!</h3>
+                <h2 class="section-heading"><?=$sec_team_title_01?></h2>
+                <h3 class="section-subheading text-muted"><?=$sec_team_subtitle?></h3>
             </div>
         </div>
         <div class="row">

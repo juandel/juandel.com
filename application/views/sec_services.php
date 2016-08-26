@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Services</h2>
-                <h3 class="section-subheading text-muted">We are eager to give you the best service out there!</h3>
+                <h2 class="section-heading"><?=$sec_serv_title_01?></h2>
+                <h3 class="section-subheading text-muted"><?=$sec_serv_subtitle?></h3>
             </div>
         </div>
         <div class="row text-center">
@@ -12,10 +12,8 @@
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa fa-building fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4 class="service-heading">Architectural Visualization</h4>
-                <p class="text-muted">Our combined knowledge in computer software and design allows us  
-		          to provide the best quality Architectural visualizations  at a highly competitive market 
-                  price.
+                <h4 class="service-heading"><?=$descr_serv_subtitle_01?></h4>
+                <p class="text-muted"><?=$descr_serv_01?>
                 </p>
             </div>
             <div class="col-md-4">
@@ -23,18 +21,16 @@
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4 class="service-heading">3D Virtual tours</h4>
-                <p class="text-muted">Sometimes static renderings might not capture experimental and spacial qualities
-                of a project. Imagine being able to, literally, be inside the building. This is where video games and architecture meet!</p>
+                <h4 class="service-heading"><?=$descr_serv_subtitle_02?></h4>
+                <p class="text-muted"><?=$descr_serv_02?></p>
             </div>
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-life-ring fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4 class="service-heading">Online support</h4>
-                <p class="text-muted">If your enterprise is more of a "do it yourself" organization we provide consultancy and support
-                    in the development of any project, either small or large scale.</p>
+                <h4 class="service-heading"><?=$descr_serv_subtitle_03?></h4>
+                <p class="text-muted"><?=$descr_serv_03?></p>
             </div>
         </div>
     </div>

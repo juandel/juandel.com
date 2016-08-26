@@ -10,8 +10,8 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-lg-12 text-center">
-              <h2 class="section-heading">Contact Us</h2>
-              <h3 class="section-subheading text-muted" style="color:white;">Feel free to contact us and access your free 3D model</h3>
+              <h2 class="section-heading"><?=$sec_contact_title_01?></h2>
+              <h3 class="section-subheading text-muted" style="color:white;"><?=$sec_contact_subtitle?></h3>
           </div>
       </div>
       <div class="row">
@@ -32,7 +32,7 @@
                                             'name'        => 'name',
                                             'id'          => 'name',
                                             'maxlength'   => '32',
-                                            'placeholder' => 'Your name',
+                                            'placeholder' => $sec_contact_name,
                                             'class'       =>"form-control"
                                           );
                               echo form_input($data_name);
@@ -45,7 +45,7 @@
                                             'name'        => 'email',
                                             'id'          => 'email',
                                             'maxlength'   => '64',
-                                            'placeholder' => 'Your email',
+                                            'placeholder' => $sec_contact_email,
                                             'class'       =>"form-control"
                                           );
                               echo form_input($data_email);
@@ -58,7 +58,7 @@
                                             'name'        => 'location',
                                             'id'          => 'location',
                                             'maxlength'   => '64',
-                                            'placeholder' => 'Were are you from?',
+                                            'placeholder' => $sec_contact_location,
                                             'class'       =>"form-control"
                                           );
                               echo form_input($data_location);
@@ -74,7 +74,7 @@
                                             'name'        => 'message',
                                             'id'          => 'message',
                                             'maxlength'   => '256',
-                                            'placeholder' => 'What can we help you with?',
+                                            'placeholder' => $sec_contact_comment,
                                             'class'       =>"form-control"
                                           );
                               echo form_textarea($data_message);
@@ -87,7 +87,7 @@
                                         'name'        => 'submit_contact',
                                         'class'       => 'btn btn-xl',
                                         'id'          => 'contact_button',
-                                        'value'       => 'Contact Us',
+                                        'value'       => $sec_contact_submit,
                                         'type'        => 'submit',
                                         'content'     => '<span class="fa fa-send fa-2x"></span>'
                                       );
@@ -101,7 +101,7 @@
           </div>
       </div>
       <div class="col-lg-12 text-center">
-        <p class="section-subheading text-muted" style="margin-top:60px; color:white;">Our form really works and we have people ready to get back to you</p>
+        <p class="section-subheading text-muted" style="margin-top:60px; color:white;"><?=$sec_contact_footer?></p>
         <h3 class="section-subheading" style="color:white;"><a style="text-decoration:none;" href="mailto:contact@jaddel.com">contact@jaddel.com</a></h3>
       </div>
   </div>

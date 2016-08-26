@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Portfolio</h2>
-                <h3 class="section-subheading text-muted">Some of the amazing work our team delivers!</h3>
+                <h2 class="section-heading"><?=$sec_port_title_01?></h2>
+                <h3 class="section-subheading text-muted"><?=$sec_port_subtitle?></h3>
             </div>
         </div>
         <div class="row">
