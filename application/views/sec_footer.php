@@ -32,7 +32,7 @@
         </div>
         <div class="row">
             <div class="col-md-offset-4 col-md-4" style="margin-top:20px;">
-                <span class="copyright" >Copyright &copy; Jaddel - Architectural Visualization 2014</span>
+                <span class="copyright" >Copyright &copy; Jaddel - Architectural Visualization <?=date("Y") ?></span>
             </div>
         </div>
     </div>

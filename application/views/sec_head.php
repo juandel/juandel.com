@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <!-- OPEN HTML TAG -->
+<?php 
+date_default_timezone_set('UTC');
+?>
 <html lang="en" >
     <head>
 
