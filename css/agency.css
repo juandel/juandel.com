@@ -186,6 +186,10 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .brand-link.active {
   color: #76bdfa;
 }
+.navbar-default #lang {
+  float: right;
+  margin: 20px 20px;
+}
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }

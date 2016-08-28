@@ -8,8 +8,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <div>
-                        <div class="col-md-6">
+                    <div class="">
+                        <!-- <div class="col-md-6"> -->
                             <a class="brand-link page-scroll" href="<?php 
                                                         if (uri_string() =="web" || uri_string()=="" ){
                                                             echo '#header';
@@ -23,12 +23,16 @@
                                     </svg>
                                 </div>
                             </a>
-                        </div>
-                        <div class="col-md-6 lang_id" style="margin-top:1.4em;">
-                            <a href="<?php echo base_url().'?lang=en';?>">EN</a>
-                            <span class="lang_separator">|</span>
-                            <a href="<?php echo base_url().'?lang=sp';?>">ES</a>
-                        </div>
+                            <div id="lang">
+                                <a href="<?php echo base_url().'?lang=en';?>">EN</a>
+                                <span class="lang_separator">|</span>
+                                <a href="<?php echo base_url().'?lang=sp';?>">ES</a>
+                            </div>
+                            
+                        <!-- </div> -->
+                        <!-- <div class="col-md-6 lang_id" style="margin-top:1.4em;">
+                            
+                        </div> -->
                         
                     </div>
                 </div>
