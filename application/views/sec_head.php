@@ -33,7 +33,16 @@ date_default_timezone_set('UTC');
         <link rel="stylesheet" href="<?=base_url()?>css/nivo-slider.css" type="text/css" />
         <link href="<?=base_url()?>css/slideme.css" rel="stylesheet"/>
 
-
+        <!-- MouseFlow -->
+        <script type="text/javascript">
+            var _mfq = _mfq || [];
+            (function() {
+            var mf = document.createElement("script");
+            mf.type = "text/javascript"; mf.async = true;
+            mf.src = "//cdn.mouseflow.com/projects/60f1ecc4-8f2e-4574-999e-5b9e4916c41f.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+          })();
+        </script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
