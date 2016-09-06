@@ -25,13 +25,18 @@ class Web extends MY_Controller {
 	 */
 	public function index()
 	{	
-		// Core - MY_Controller-Father Class
-		
+		// Sets default language
+		$lang= array('lang' => 'sp' );
+		$this->session->set_userdata($lang);
+
+		// Sets language chosen by client with GET.
 		$lang=$this->session->set_userdata($this->input->get(NULL, TRUE));
 		// print_r($this->session->userdata('lang'));
+		// print_r($this->input->get(NULL, TRUE));
+
 		if ($this->session->userdata('lang') == 'sp') {
 			$this->lang->load('main_lang', 'spanish');
-		}else{
+		}elseif($this->session->userdata('lang') == 'en'){
 			$this->lang->load('main_lang', 'english');
 		}
 		$data['head']=$this->top_template();
